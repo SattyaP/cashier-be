@@ -9,5 +9,3 @@ Feature REST API PRODUCT:
 
 Feature REST API CATEGORY: 
 - [Create, Read, Update](https://api.alsavdev.com/docs/category).
-
-See documentation for more https://api.alsavdev.com/docs/finaly
