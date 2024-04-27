@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Docs | Categories</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -37,21 +38,21 @@
             <p class="fs-5 fst-italic">All Of the endpoint on below need an API KEY its get from user dashboard <span><a
                         href="{{ route('login') }}">here</a></span></p>
             <ul>
-                <li class="fs-5 mb-3">ENDPOINT categories Read ( GET ) https://api.alsavdev.com/categories <br>
+                <li class="fs-5 mb-3">ENDPOINT categories Read ( GET ) http://10.1.29.47:8000/categories <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Feature : <br>
                     - get list categories with /categories <br>
                 </li>
                 <li class="fs-5 mb-3">
-                    ENDPOINT categories Create ( POST ) https://api.alsavdev.com/categories/{id} <br>
+                    ENDPOINT categories Create ( POST ) http://10.1.29.47:8000/categories/{id} <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Structure Data : <br>
                     - name ( required ) <br>
                 </li>
                 <li class="fs-5 mb-3">
-                    ENDPOINT categories UPDATE ( POST ) https://api.alsavdev.com/categories/{id} <br>
+                    ENDPOINT categories UPDATE ( POST ) http://10.1.29.47:8000/categories/{id} <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Structure Data : <br>
@@ -60,6 +61,9 @@
             </ul>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

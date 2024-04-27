@@ -10,13 +10,17 @@ class ProductResource extends JsonResource
     {
         return [
             'product_id' => $this->id,
-            'category_id' => $this->Category->name,
+            'category_id' => $this->category_id,
             'name_product' => $this->name_product,
             'sku' => $this->sku,
-            'image_product' => $this->image_product,
+            'image_product' => $this->handleImage(),
             'description' => $this->description,
             'amount' => $this->amount,
             'qty' => $this->qty,
         ];
+    }
+
+    public function handleImage() {
+        return '/storage/products/' . $this->image_product;
     }
 }

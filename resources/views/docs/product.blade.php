@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Docs | Product</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <p class="fs-5 fst-italic">All Of the endpoint on below need an API KEY its get from user dashboard <span><a
                         href="{{ route('login') }}">here</a></span></p>
             <ul>
-                <li class="fs-5 mb-3">ENDPOINT Product <span class="fw-bold">READ</span>  ( GET ) https://api.alsavdev.com/product <br>
+                <li class="fs-5 mb-3">ENDPOINT Product <span class="fw-bold">READ</span>  ( GET ) http://10.1.29.47:8000/api/products <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Feature : <br>
@@ -45,7 +46,7 @@
                     - get latest product with /product?latest=true
                 </li>
                 <li class="fs-5 mb-3">
-                    ENDPOINT Product <span class="fw-bold">CREATE</span> ( POST ) https://api.alsavdev.com/product <br>
+                    ENDPOINT Product <span class="fw-bold">CREATE</span> ( POST ) http://10.1.29.47:8000/api/products <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Structure Data : <br>
@@ -57,24 +58,27 @@
                     - qty ( required ) <br>
                 </li>
                 <li class="fs-5 mb-3">
-                    ENDPOINT Product <span class="fw-bold">UPDATE</span> ( POST ) https://api.alsavdev.com/product/{id} <br>
+                    ENDPOINT Product <span class="fw-bold">UPDATE</span> ( POST ) http://10.1.29.47:8000/api/products/{id} <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                     <br>
                     Structure Data : <br>
                     - category_id <br>
                     - name_product <br>
-                    - image_product <br>
+                    - image_product <span class="fw-bold">( BUG )</span> <br>
                     - description <br>
                     - amount <br>
                     - qty <br>
                 </li>
                 <li class="fs-5 mb-3">
-                    ENDPOINT Product <span class="fw-bold">DESTROY</span> ( DELETE ) https://api.alsavdev.com/product/{id} <br>
+                    ENDPOINT Product <span class="fw-bold">DESTROY</span> ( DELETE ) http://10.1.29.47:8000/api/products/{id} <br>
                     <span class="text-red">Need bearer token <span><a href="{{ route('login') }}">here</a></span></span>
                 </li>
             </ul>
         </main>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

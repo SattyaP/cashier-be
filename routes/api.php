@@ -25,13 +25,13 @@ Route::controller(RegisterController::class)->group(function () {
 Route::post('login', [RegisterController::class, 'login'])->name('login');
 
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'api'])->group(function () {
     Route::get('products', [ProductController::class, 'index']);
     Route::post('products', [ProductController::class, 'store']);
     Route::get('products/{product}', [ProductController::class, 'show']);
-    Route::post('products/{product}', [ProductController::class, 'update']);
+    Route::patch('products/{product}', [ProductController::class, 'update']);
     Route::delete('products/{product}', [ProductController::class, 'destroy']);
     Route::get('products/{product}', [ProductController::class, 'show']);
-
     Route::apiResource('categories', CategoryController::class);
 });
+

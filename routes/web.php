@@ -40,5 +40,6 @@ Route::controller(DocsController::class)->group(function () {
         Route::get('category', 'category')->name('category');
         Route::get('introduction', 'introduction')->name('introduction');
         Route::get('about', 'about')->name('about');
+        Route::get('html', 'html')->name('html');
     });
 });

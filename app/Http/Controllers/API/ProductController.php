@@ -35,7 +35,7 @@ class ProductController extends BaseController
         $validator = Validator::make($request->all(), [
             'category_id' => 'required',
             'name_product' => 'required',
-            // 'image_product' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // 'image_product' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
             'amount' => 'required|numeric',
             'qty' => 'required|numeric',
         ]);

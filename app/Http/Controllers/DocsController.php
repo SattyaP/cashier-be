@@ -28,4 +28,8 @@ class DocsController extends Controller
     {
         return view('docs.category');
     }
+    public function html()
+    {
+        return view('docs.html');
+    }
 }
